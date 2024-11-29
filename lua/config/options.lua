@@ -2,7 +2,7 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 vim.opt.spell = false -- disable spell checking
 vim.opt.swapfile = false -- don't create swapfile
 vim.opt.scrolloff = 3 -- start scrolling text 3 lines before and after screen limits
@@ -29,4 +29,6 @@ vim.opt.listchars = { tab = "¦ ", trail = "." } -- display tabs and trailing wh
 
 vim.opt.shortmess:append("c") -- don't display ins-completion-menu messages
 vim.opt.iskeyword:append("-") -- add '-' as a keyword
-vim.cmd('set whichwrap+=<,>,[,],h,l') -- enable movement with arrow keys across lines
+vim.cmd("set whichwrap+=<,>,[,],h,l") -- enable movement with arrow keys across lines
+
+vim.g.autoformat = false

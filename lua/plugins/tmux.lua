@@ -1,15 +1,15 @@
+-- Add tmux.nvim plugin
 return {
-  -- Other plugins...
   {
     "aserowy/tmux.nvim",
     config = function()
       require("tmux").setup({
         copy_sync = {
-          enable = true, -- enables tmux clipboard sync
-          redirect_to_clipboard = true, -- copy to system clipboard
+          enable = true,  -- Enable copying from tmux to Neovim
+          redirect_to_clipboard = true,  -- Redirect yanked text to the system clipboard
         },
         navigation = {
-          enable_default_keybindings = true, -- enables default tmux navigation keybindings
+          enable_default_keybindings = true,  -- Use default keybindings
         },
       })
     end,
