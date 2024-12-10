@@ -17,9 +17,9 @@ wk.add({
   { ";", group = "Utils" }, -- Start of Utils menu
   { ";f", "<cmd>lua vim.lsp.buf.format()<CR>", desc = "Format Document" },
   { ";a", "<cmd>ClangdSwitchSourceHeader<CR>", desc = "Switch Source/Header" },
+  { ";e", "<cmd>Neotree<CR>", desc = "File Explorer" },
   { ";s", group = "Search" }, -- Start of Search submenu
   { ";sf", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
   { ";sg", "<cmd>Telescope live_grep<CR>", desc = "Grep Text" },
   { ";sb", "<cmd>Telescope buffers<CR>", desc = "Opened Buffers" },
-  { ";se", "<cmd>Neotree<CR>", desc = "File Explorer" },
 }, { mode = "n" }) -- Ensure that the mappings are for normal mode only

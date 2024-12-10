@@ -32,3 +32,14 @@ vim.opt.iskeyword:append("-") -- add '-' as a keyword
 vim.cmd("set whichwrap+=<,>,[,],h,l") -- enable movement with arrow keys across lines
 
 vim.g.autoformat = false
+vim.o.hlsearch = true
+vim.o.incsearch = true
+
+vim.diagnostic.enable(false)
+
+-- Apply the custom highlight after the colorscheme is loaded
+vim.api.nvim_create_autocmd("ColorScheme", {
+    callback = function()
+        vim.opt.fillchars:append({ diff = " " })
+    end,
+})
