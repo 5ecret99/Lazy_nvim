@@ -26,7 +26,7 @@ local wk = require("which-key")
 wk.add({
   -- Normal mode mappings
   { ";", group = "Utils" }, -- Start of Utils menu
-  { ";F", "m'<cmd>silent! ?transition_table\\|>;?,/>;/EasyAlign * /, \\|>,\\|> \\+>{};\\|>>;\\|>$/ {'right_marin':0, 'delimiter_align':l}<cr><esc><cmd>nohl<cr>`'", desc = "Align Fsm" },
+  { ";F", "m'<cmd>silent! ?^\\s*using\\|>;?,/>;/EasyAlign * / \\@<=, \\|>,\\|> \\+>{};\\|>>;\\|>$/ {'right_marin':0, 'delimiter_align':l}<cr><esc><cmd>nohl<cr>`'", desc = "Align Fsm" },
   { ";f", "<cmd>lua vim.lsp.buf.format()<CR>", desc = "Format Document" },
   { ";a", "<cmd>ClangdSwitchSourceHeader<CR>", desc = "Switch Source/Header" },
   { ";e", "<cmd>Neotree<CR>", desc = "File Explorer" },
