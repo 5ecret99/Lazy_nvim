@@ -31,6 +31,7 @@ wk.add({
   { ";a", "<cmd>ClangdSwitchSourceHeader<CR>", desc = "Switch Source/Header" },
   { ";e", "<cmd>Neotree<CR>", desc = "File Explorer" },
   { ";w", toggle_diffopt_iwhite, desc = "Toggle to ignore white spaces im vimdiff" },
+  { ";q", "<cmd>qa<CR>", desc = "Exit all files" },
   { ";s", group = "Search" }, -- Start of Search submenu
   { ";sf", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
   { ";sg", "<cmd>Telescope live_grep<CR>", desc = "Grep Text" },

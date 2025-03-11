@@ -28,12 +28,29 @@ vim.opt.list = true -- enable listchars
 vim.opt.listchars = { tab = "¦ ", trail = "." } -- display tabs and trailing whitespace
 
 vim.opt.shortmess:append("c") -- don't display ins-completion-menu messages
-vim.opt.iskeyword:append("-") -- add '-' as a keyword
+vim.opt.iskeyword:remove("-") -- Unbind - from being part of a word
+vim.opt.ignorecase = true 
+vim.opt.smartcase = true
 vim.cmd("set whichwrap+=<,>,[,],h,l") -- enable movement with arrow keys across lines
 
 vim.g.autoformat = false
-vim.o.hlsearch = true
-vim.o.incsearch = true
+
+-- hlsearch: smartcase behavior
+vim.o.hlsearch = true      -- Highlight all search results
+vim.o.ignorecase = true    -- Ignore case in search patterns...
+vim.o.smartcase = true     -- ...unless pattern contains uppercase letters
+
+-- incsearch: case-sensitive behavior
+vim.o.incsearch = true     -- Enable incremental search
+
+-- Use autocommands to make incsearch case-sensitive dynamically
+vim.cmd([[
+  augroup IncSearchCaseSensitive
+    autocmd!
+    autocmd CmdlineEnter /,\? set noignorecase
+    autocmd CmdlineLeave /,\? set ignorecase smartcase
+  augroup END
+]])
 
 vim.diagnostic.enable(false)
 
