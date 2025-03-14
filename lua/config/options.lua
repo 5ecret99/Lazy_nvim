@@ -43,6 +43,8 @@ vim.o.smartcase = true     -- ...unless pattern contains uppercase letters
 -- incsearch: case-sensitive behavior
 vim.o.incsearch = true     -- Enable incremental search
 
+vim.g.snacks_animate = false
+
 -- Use autocommands to make incsearch case-sensitive dynamically
 vim.cmd([[
   augroup IncSearchCaseSensitive
