@@ -5,6 +5,8 @@
 vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>FzfLua files<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-g>", "<cmd>FzfLua live_grep<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>FzfLua buffers<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-t>", "<cmd>FzfLua tags<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>FzfLua tmux_buffers<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-u>", "<cmd>FzfLua resume<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-e>", "<cmd>Neotree<CR>", { noremap = true, silent = true })
 
@@ -36,4 +38,6 @@ wk.add({
   { ";sf", "<cmd>FzfLua files<CR>", desc = "Find Files" },
   { ";sg", "<cmd>FzfLua live_grep<CR>", desc = "Grep Text" },
   { ";sb", "<cmd>FzfLua buffers<CR>", desc = "Opened Buffers" },
+  { ";st", "<cmd>FzfLua tags<CR>", desc = "Tags" },
+  { ";sp", "<cmd>FzfLua tmux_buffers<CR>", desc = "Clipboard" },
 }, { mode = "n" }) -- Ensure that the mappings are for normal mode only
