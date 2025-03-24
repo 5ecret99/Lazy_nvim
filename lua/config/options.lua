@@ -33,6 +33,8 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.cmd("set whichwrap+=<,>,[,],h,l") -- enable movement with arrow keys across lines
 
+vim.g.lazyvim_picker = "telescope"
+
 vim.g.autoformat = false
 
 -- hlsearch: smartcase behavior

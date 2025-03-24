@@ -2,12 +2,12 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>FzfLua files<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-g>", "<cmd>FzfLua live_grep<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>FzfLua buffers<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-t>", "<cmd>FzfLua tags<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>FzfLua tmux_buffers<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-u>", "<cmd>FzfLua resume<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-g>", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>Telescope buffers<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-t>", "<cmd>Telescope tags<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>Telescope registers<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-u>", "<cmd>Telescope resume<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-e>", "<cmd>Neotree<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", ";", "<Nop>") -- Unbind semicolon from its default behavior
@@ -35,9 +35,9 @@ wk.add({
   { ";w", toggle_diffopt_iwhite, desc = "Toggle to ignore white spaces im vimdiff" },
   { ";q", "<cmd>qa<CR>", desc = "Exit all files" },
   { ";s", group = "Search" }, -- Start of Search submenu
-  { ";sf", "<cmd>FzfLua files<CR>", desc = "Find Files" },
-  { ";sg", "<cmd>FzfLua live_grep<CR>", desc = "Grep Text" },
-  { ";sb", "<cmd>FzfLua buffers<CR>", desc = "Opened Buffers" },
-  { ";st", "<cmd>FzfLua tags<CR>", desc = "Tags" },
-  { ";sp", "<cmd>FzfLua tmux_buffers<CR>", desc = "Clipboard" },
+  { ";sf", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
+  { ";sg", "<cmd>Telescope live_grep<CR>", desc = "Grep Text" },
+  { ";sb", "<cmd>Telescope buffers<CR>", desc = "Opened Buffers" },
+  { ";st", "<cmd>Telescope tags<CR>", desc = "Tags" },
+  { ";sp", "<cmd>Telescope registers<CR>", desc = "Registers" },
 }, { mode = "n" }) -- Ensure that the mappings are for normal mode only
