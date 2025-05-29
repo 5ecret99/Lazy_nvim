@@ -6,8 +6,8 @@ vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>Telescope find_files<CR>", { noremap
 vim.api.nvim_set_keymap("n", "<C-g>", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>Telescope buffers<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-t>", "<cmd>Telescope tags<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-r>", "<cmd>Telescope registers<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-u>", "<cmd>Telescope resume<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-m>", "<cmd>CopilotChat<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-e>", "<cmd>Neotree<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", ";", "<Nop>") -- Unbind semicolon from its default behavior
@@ -40,4 +40,5 @@ wk.add({
   { ";sb", "<cmd>Telescope buffers<CR>", desc = "Opened Buffers" },
   { ";st", "<cmd>Telescope tags<CR>", desc = "Tags" },
   { ";sp", "<cmd>Telescope registers<CR>", desc = "Registers" },
+  { ";sm", "<cmd>CopilotChat<CR>", desc = "CopilotChat" },
 }, { mode = "n" }) -- Ensure that the mappings are for normal mode only
