@@ -23,7 +23,6 @@ vim.opt.splitbelow = true -- by default split vertically at the bottom
 vim.opt.number = true -- get line numbers
 vim.opt.relativenumber = true -- display line numbers relative to the current position for quick jumps
 vim.opt.cursorline = true -- highlight the current cursor line
-vim.opt.hlsearch = false -- don't display matches on the previous search pattern
 vim.opt.list = true -- enable listchars
 vim.opt.listchars = { tab = "¦ ", trail = "." } -- display tabs and trailing whitespace
 
@@ -46,15 +45,6 @@ vim.o.smartcase = true     -- ...unless pattern contains uppercase letters
 vim.o.incsearch = true     -- Enable incremental search
 
 vim.g.snacks_animate = false
-
--- Use autocommands to make incsearch case-sensitive dynamically
-vim.cmd([[
-  augroup IncSearchCaseSensitive
-    autocmd!
-    autocmd CmdlineEnter /,\? set noignorecase
-    autocmd CmdlineLeave /,\? set ignorecase smartcase
-  augroup END
-]])
 
 vim.diagnostic.enable(false)
 

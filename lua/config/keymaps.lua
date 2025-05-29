@@ -6,7 +6,7 @@ vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>Telescope find_files<CR>", { noremap
 vim.api.nvim_set_keymap("n", "<C-g>", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>Telescope buffers<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-t>", "<cmd>Telescope tags<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>Telescope registers<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-r>", "<cmd>Telescope registers<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-u>", "<cmd>Telescope resume<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<C-e>", "<cmd>Neotree<CR>", { noremap = true, silent = true })
 
