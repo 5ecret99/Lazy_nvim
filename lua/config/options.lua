@@ -28,21 +28,17 @@ vim.opt.listchars = { tab = "¦ ", trail = "." } -- display tabs and trailing wh
 
 vim.opt.shortmess:append("c") -- don't display ins-completion-menu messages
 vim.opt.iskeyword:remove("-") -- Unbind - from being part of a word
-vim.opt.ignorecase = true 
-vim.opt.smartcase = true
 vim.cmd("set whichwrap+=<,>,[,],h,l") -- enable movement with arrow keys across lines
 
 vim.g.lazyvim_picker = "telescope"
 
 vim.g.autoformat = false
 
--- hlsearch: smartcase behavior
-vim.o.hlsearch = true      -- Highlight all search results
-vim.o.ignorecase = true    -- Ignore case in search patterns...
-vim.o.smartcase = true     -- ...unless pattern contains uppercase letters
-
--- incsearch: case-sensitive behavior
-vim.o.incsearch = true     -- Enable incremental search
+-- search
+vim.opt.hlsearch = true -- highlight all search results
+vim.opt.ignorecase = true -- ignore case in search patterns...
+vim.opt.smartcase = true -- ...unless the pattern contains uppercase letters
+vim.opt.incsearch = true -- show matches while typing
 
 vim.g.snacks_animate = false
 

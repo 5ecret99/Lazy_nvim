@@ -2,13 +2,15 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.api.nvim_set_keymap("n", "<C-f>", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-g>", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-b>", "<cmd>Telescope buffers<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-t>", "<cmd>Telescope tags<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-u>", "<cmd>Telescope resume<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-m>", "<cmd>CopilotChat<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-e>", "<cmd>Neotree<CR>", { noremap = true, silent = true })
+local map = function(lhs, rhs) vim.keymap.set("n", lhs, rhs, { silent = true }) end
+
+map("<C-f>", "<cmd>Telescope find_files<CR>")
+map("<C-g>", "<cmd>Telescope live_grep<CR>")
+map("<C-b>", "<cmd>Telescope buffers<CR>")
+map("<C-t>", "<cmd>Telescope tags<CR>")
+map("<C-u>", "<cmd>Telescope resume<CR>")
+map("<C-m>", "<cmd>CopilotChat<CR>") -- note: <C-m> is the same key as <CR> in a terminal
+map("<C-e>", "<cmd>Neotree<CR>")
 
 vim.keymap.set("n", ";", "<Nop>") -- Unbind semicolon from its default behavior
 
